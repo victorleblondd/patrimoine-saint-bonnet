@@ -1,0 +1,9 @@
+# Menu principal (l’accueil est ajouté automatiquement par la marque du site).
+- titre: "L’association"
+  url: "/association/"
+- titre: "Raconte-moi Saint-Bonnet"
+  url: "/raconte-moi/"
+- titre: "Le patrimoine"
+  url: "/patrimoine/"
+- titre: "Archives et généalogie"
+  url: "/archives-et-genealogie/"

@@ -1,0 +1,41 @@
+# Site de l’association du Patrimoine de Saint-Bonnet-de-Condat (Cantal)
+# Publié avec GitHub Pages (Jekyll). Voir README.md pour la mise à jour.
+
+title: "Association du Patrimoine de Saint-Bonnet-de-Condat"
+nom_court: "Association du Patrimoine"
+lieu: "de Saint-Bonnet-de-Condat"
+description: "Association du Patrimoine de Saint-Bonnet-de-Condat (Cantal) : le projet « Raconte-moi Saint-Bonnet », le patrimoine du village, ses archives et la généalogie. L’association cherche des bénévoles pour reprendre vie."
+lang: fr-FR
+locale: fr_FR
+
+# Adresse du site. Sur GitHub Pages sans nom de domaine :
+#   url = "https://victorleblondd.github.io" et baseurl = "/nom-du-depot".
+# Avec un nom de domaine : url = "https://le-domaine.fr" et baseurl = "".
+url: "https://victorleblondd.github.io"
+baseurl: "/patrimoine-saint-bonnet"
+
+# Tant que l’association n’a pas adopté le site :
+#   - bandeau « Proposition de site » en haut de chaque page ;
+#   - site non référencé par les moteurs de recherche (balise noindex) ;
+#   - mentions légales au nom de l’auteur de la proposition.
+# Une fois le site adopté par l’association : passer à false (et compléter les mentions légales).
+proposition: true
+
+timezone: Europe/Paris
+encoding: utf-8
+
+defaults:
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: page
+
+exclude:
+  - README.md
+  - LICENSE
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - outils

@@ -1,0 +1,30 @@
+# Noms de famille les plus fréquents dans le premier registre de la commune
+# (5 Mi 313/1, baptêmes, mariages et sépultures de 1601 à 1765), d’après l’indexation
+# collaborative des Archives départementales du Cantal : 1 242 relevés, 353 noms de famille.
+# releves = nombre de relevés portant ce nom (graphie de l’indexation).
+
+total_releves: 1242
+total_noms: 353
+noms:
+  - nom: "Rodde"
+    releves: 70
+  - nom: "Laurens"
+    releves: 68
+  - nom: "Rastoul"
+    releves: 68
+  - nom: "Vernet"
+    releves: 47
+  - nom: "Rode"
+    releves: 43
+  - nom: "Rahon"
+    releves: 43
+  - nom: "Brunet"
+    releves: 34
+  - nom: "Faucon"
+    releves: 26
+  - nom: "Chabrier"
+    releves: 23
+  - nom: "Laurent"
+    releves: 18
+# Viennent ensuite, avec 16 ou 17 relevés chacun :
+suivants: "Fabre, Santoire, Mounier, Boyer et Pissavy"

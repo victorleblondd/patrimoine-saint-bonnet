@@ -1,0 +1,108 @@
+# Registres paroissiaux et d’état civil de Saint-Bonnet-de-Condat numérisés par les
+# Archives départementales du Cantal (catalogue des Archives, relevé en septembre 2026).
+# nature : BMS = baptêmes, mariages, sépultures ; N = naissances ; M = mariages ; D = décès.
+# vues : nombre de pages numérisées annoncé par le catalogue.
+
+- groupe: "Tables décennales"
+  description: "L’index de tous les actes, décennie par décennie."
+  registres:
+    - cote: "4 NUM 173"
+      nature: "Tables décennales"
+      periode: "1792–1932 et 1943–1962"
+      vues: 277
+
+- groupe: "Collection départementale"
+  description: "La collection du greffe."
+  registres:
+    - cote: "5 Mi 313/1"
+      nature: "Baptêmes, mariages, sépultures"
+      periode: "1601–1765"
+      vues: 292
+    - cote: "5 Mi 313/2"
+      nature: "Baptêmes, mariages, sépultures"
+      periode: "1766–1789"
+      vues: 229
+    - cote: "5 Mi 314/2-b"
+      nature: "Baptêmes, mariages, sépultures"
+      periode: "1790–an VII"
+      vues: 47
+    - cote: "5 Mi 313/3"
+      nature: "Naissances"
+      periode: "1799–1867"
+      vues: 390
+    - cote: "5 Mi 313/4"
+      nature: "Naissances"
+      periode: "1868–1906"
+      vues: 319
+    - cote: "5 Mi 313/5"
+      nature: "Mariages"
+      periode: "1800–1867"
+      vues: 334
+    - cote: "5 Mi 313/6"
+      nature: "Mariages"
+      periode: "1868–1902"
+      vues: 224
+    - cote: "5 Mi 314/1-a"
+      nature: "Mariages"
+      periode: "1903–1906"
+      vues: 27
+    - cote: "5 Mi 314/1-b"
+      nature: "Décès"
+      periode: "an VIII–1867"
+      vues: 332
+    - cote: "5 Mi 314/2-a"
+      nature: "Décès"
+      periode: "1868–1906"
+      vues: 206
+    - cote: "5 Mi 732/1-a"
+      nature: "Naissances, mariages"
+      periode: "1907–1932"
+      vues: 289
+    - cote: "5 Mi 732/1-b"
+      nature: "Décès"
+      periode: "1907–1912"
+      vues: 32
+    - cote: "5 Mi 732/2"
+      nature: "Décès"
+      periode: "1913–1951"
+      vues: 178
+
+- groupe: "Collection communale"
+  description: "La collection de la paroisse, puis de la mairie."
+  registres:
+    - cote: "2 EX 173/1"
+      nature: "Baptêmes, mariages, sépultures"
+      periode: "avril 1658 – mai 1659"
+      vues: 4
+    - cote: "5 Mi 608/6-a"
+      nature: "Baptêmes, mariages, sépultures"
+      periode: "1682–1703"
+      vues: 71
+    - cote: "5 Mi 608/6-b"
+      nature: "Baptêmes, mariages, sépultures"
+      periode: "1704–1720"
+      vues: 140
+    - cote: "5 Mi 608/6-c"
+      nature: "Baptêmes, mariages, sépultures"
+      periode: "1721–1736"
+      vues: 114
+    - cote: "5 Mi 608/6-d"
+      nature: "Baptêmes, mariages, sépultures"
+      periode: "1737–1742"
+      vues: 37
+    - cote: "5 Mi 608/7-a"
+      nature: "Baptêmes, mariages, sépultures"
+      periode: "1743–1760"
+      vues: 154
+    - cote: "5 Mi 608/7-b"
+      nature: "Baptêmes, mariages, sépultures"
+      periode: "1761–1778"
+      vues: 161
+    - cote: "5 Mi 609/1"
+      nature: "Baptêmes, mariages, sépultures"
+      periode: "1779–1792"
+      vues: 106
+    - cote: "5 Mi 609/2"
+      nature: "Naissances, mariages, décès"
+      periode: "1797–1825"
+      vues: 391

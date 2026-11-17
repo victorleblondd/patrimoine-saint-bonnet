@@ -1,0 +1,321 @@
+/* Association du Patrimoine de Saint-Bonnet-de-Condat
+   Couleurs tirées des matériaux du village : basalte, lauze, neige, lichen des vieilles pierres,
+   et la Santoire pour les liens. Augmenter le numéro « ?v= » dans _includes/head.html à chaque changement. */
+
+/* ---------- Police : Spectral (Production Type), licence SIL Open Font License 1.1 ---------- */
+@font-face {
+  font-family: "Spectral";
+  src: url("../fonts/spectral-latin-400-normal.woff2") format("woff2");
+  font-weight: 400; font-style: normal; font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Spectral";
+  src: url("../fonts/spectral-latin-400-italic.woff2") format("woff2");
+  font-weight: 400; font-style: italic; font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: "Spectral";
+  src: url("../fonts/spectral-latin-600-normal.woff2") format("woff2");
+  font-weight: 600 700; font-style: normal; font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* ---------- Couleurs et mesures ---------- */
+:root {
+  color-scheme: light dark;
+  --fond: #F4F6F6;          /* neige */
+  --surface: #FFFFFF;
+  --encre: #232B2F;
+  --encre-2: #4C585E;       /* lauze */
+  --filet: #D3DADD;
+  --basalte: #1F272B;
+  --sur-basalte: #EEF2F2;
+  --sur-basalte-2: #B9C4C8;
+  --santoire: #135B5F;      /* liens */
+  --santoire-fonce: #0C4346;
+  --santoire-pale: #E2EEED;
+  --sur-santoire: #FFFFFF;
+  --lichen: #C2B53A;        /* sur fond sombre uniquement */
+  --lichen-pale: #F2EFCF;
+  --focus: #0B5ED7;
+  --focus-sombre: #E8C547;  /* sur les bandes en basalte */
+  --police-texte: "Spectral", "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  --police-ui: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+  --mesure: 38rem;
+  --rayon: 4px;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fond: #13181A;
+    --surface: #1A2124;
+    --encre: #E4E9EA;
+    --encre-2: #A8B4B9;
+    --filet: #2F3A3E;
+    --basalte: #0E1214;
+    --sur-basalte: #E4E9EA;
+    --sur-basalte-2: #A8B4B9;
+    --santoire: #86CBC6;
+    --santoire-fonce: #A9DCD8;
+    --santoire-pale: #17302F;
+    --sur-santoire: #0E1A1B;
+    --lichen: #D6CA5C;
+    --lichen-pale: #2C2A12;
+    --focus: #E8C547;
+  }
+}
+
+/* ---------- Base ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--surface);
+  color: var(--encre);
+  font-family: var(--police-texte);
+  font-size: 1.1875rem;
+  line-height: 1.62;
+  font-kerning: normal;
+  overflow-wrap: break-word;
+}
+img { max-width: 100%; height: auto; }
+h1, h2, h3 { font-family: var(--police-texte); font-weight: 600; line-height: 1.15; letter-spacing: -.005em; text-wrap: balance; color: var(--encre); }
+h1 { font-size: clamp(2.25rem, 1.55rem + 2.8vw, 3.5rem); margin: 0 0 .35em; }
+h2 { font-size: clamp(1.75rem, 1.4rem + 1.4vw, 2.375rem); margin: 0 0 .55em; }
+h3 { font-size: 1.375rem; line-height: 1.25; margin: 0 0 .45em; }
+p, ul, ol, dl { margin: 0 0 1em; }
+p { text-wrap: pretty; }
+a { color: var(--santoire); text-decoration-thickness: 1px; text-underline-offset: .18em; }
+a:hover { color: var(--santoire-fonce); text-decoration-thickness: 2px; }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 3px; border-radius: 2px; }
+strong { font-weight: 600; }
+abbr[title] { text-decoration: none; }
+.visuellement-cache {
+  position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; border: 0;
+}
+.sans-retour { white-space: nowrap; }
+.conteneur { width: min(100% - 2.5rem, 72rem); margin-inline: auto; }
+@media (max-width: 480px) { .conteneur { width: calc(100% - 2rem); } }
+.mesure { max-width: var(--mesure); }
+main:focus { outline: none; }
+
+/* ---------- Lien d'évitement ---------- */
+.lien-evitement {
+  position: absolute; left: 1rem; top: -100px; z-index: 100;
+  background: var(--basalte); color: var(--sur-basalte); font-family: var(--police-ui); font-weight: 600;
+  padding: .75rem 1rem; border-radius: var(--rayon); text-decoration: none;
+}
+.lien-evitement:focus { top: 1rem; outline: 3px solid var(--focus-sombre); outline-offset: 2px; }
+
+/* ---------- Bandeau « Proposition de site » ---------- */
+.bandeau-proposition { background: var(--lichen-pale); color: var(--encre); font-family: var(--police-ui); font-size: .9rem; line-height: 1.4; }
+.bandeau-proposition p { margin: 0; padding-block: .5rem; text-align: center; text-wrap: balance; }
+
+/* ---------- En-tête ---------- */
+.en-tete-site { background: var(--basalte); color: var(--sur-basalte); --focus: var(--focus-sombre); }
+.en-tete-interieur { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .75rem 2rem; padding-block: 1.1rem; }
+.marque { color: inherit; text-decoration: none; display: flex; flex-direction: column; line-height: 1.1; }
+.marque:hover { color: inherit; }
+.marque-nom { font-weight: 600; font-size: clamp(1.3rem, 1.1rem + .7vw, 1.55rem); letter-spacing: -.005em; }
+.marque-lieu { font-family: var(--police-ui); font-size: .9rem; color: var(--sur-basalte-2); margin-top: .25rem; }
+.navigation ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: .25rem 1.6rem; }
+.navigation a {
+  display: inline-block; padding-block: .55rem .4rem;
+  font-family: var(--police-ui); font-size: 1rem; color: var(--sur-basalte); text-decoration: none;
+  border-bottom: 2px solid transparent;
+}
+.navigation a:hover { color: var(--sur-basalte); border-bottom-color: var(--sur-basalte-2); }
+.navigation a[aria-current="page"] { border-bottom-color: var(--lichen); }
+.bouton-menu { display: none; }
+.icone { width: 1.25em; height: 1.25em; flex: none; }
+@media (max-width: 480px) {
+  .en-tete-interieur { column-gap: 1rem; }
+  .marque-nom { font-size: 1.15rem; }
+  .marque-lieu { font-size: .82rem; }
+}
+@media (max-width: 860px) {
+  .js .bouton-menu {
+    display: inline-flex; align-items: center; gap: .45rem;
+    font-family: var(--police-ui); font-size: 1rem; font-weight: 600; color: var(--sur-basalte);
+    background: transparent; border: 1px solid var(--sur-basalte-2); border-radius: var(--rayon);
+    padding: .55rem .85rem; min-height: 44px; cursor: pointer;
+  }
+  .js .bouton-menu .icone-fermer, .js .bouton-menu[aria-expanded="true"] .icone-ouvrir { display: none; }
+  .js .bouton-menu[aria-expanded="true"] .icone-fermer { display: inline; }
+  .js .navigation { display: none; flex-basis: 100%; }
+  .js .navigation.ouverte { display: block; }
+  .navigation ul { flex-direction: column; gap: 0; padding-bottom: .5rem; }
+  .navigation li + li { border-top: 1px solid rgba(255, 255, 255, .12); }
+  .navigation a { display: block; padding-block: .8rem; border-bottom: 0; }
+  .navigation a[aria-current="page"] { border-bottom: 0; box-shadow: inset 4px 0 0 var(--lichen); padding-left: .9rem; }
+}
+
+/* ---------- Accueil : la mémoire du village ---------- */
+.heros { padding-block: clamp(2.25rem, 1rem + 4.5vw, 5rem); }
+.heros-grille { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: clamp(2rem, 1rem + 3.5vw, 4.5rem); align-items: center; }
+.heros-titre { font-size: clamp(1.1rem, 1rem + .45vw, 1.35rem); line-height: 1.3; color: var(--encre-2); margin: 0 0 1.4rem; max-width: 30ch; }
+.litanie {
+  font-style: italic; font-size: clamp(1.75rem, 1.15rem + 2.5vw, 2.9rem); line-height: 1.2;
+  letter-spacing: -.01em; margin: 0 0 1.5rem; max-width: 21ch; text-wrap: balance; color: var(--encre);
+}
+.heros-intro { max-width: var(--mesure); color: var(--encre-2); }
+.etat { margin-top: 1.75rem; padding-top: 1.5rem; border-top: 1px solid var(--filet); max-width: var(--mesure); }
+.etat p:first-child { margin-bottom: 1.1rem; }
+.heros-photo { margin: 0; }
+.heros-photo img { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 44% 42%; border-radius: var(--rayon); background: var(--fond); }
+figcaption { font-family: var(--police-ui); font-size: .875rem; line-height: 1.45; color: var(--encre-2); margin-top: .6rem; }
+@media (max-width: 860px) {
+  .heros-grille { grid-template-columns: minmax(0, 1fr); }
+  .heros-photo img { aspect-ratio: 3 / 2; object-position: 44% 45%; }
+  .litanie { max-width: 24ch; }
+}
+
+/* ---------- Boutons ---------- */
+.boutons { display: flex; flex-wrap: wrap; gap: .75rem; margin: 0; }
+.bouton {
+  display: inline-flex; align-items: center; justify-content: center; gap: .5rem; min-height: 44px;
+  padding: .7rem 1.2rem; border: 2px solid var(--santoire); border-radius: var(--rayon);
+  background: var(--santoire); color: var(--sur-santoire);
+  font-family: var(--police-ui); font-size: 1rem; font-weight: 600; line-height: 1.25; text-decoration: none; text-align: center;
+}
+.bouton:hover { background: var(--santoire-fonce); border-color: var(--santoire-fonce); color: var(--sur-santoire); }
+.bouton--secondaire { background: transparent; color: var(--santoire); }
+.bouton--secondaire:hover { background: var(--santoire-pale); color: var(--santoire-fonce); }
+
+/* ---------- Sections ---------- */
+.bloc { padding-block: clamp(2.5rem, 1.4rem + 4vw, 4.75rem); }
+.bloc--teinte { background: var(--fond); }
+.bloc--appel { background: var(--lichen-pale); }
+.bloc-intro { max-width: var(--mesure); color: var(--encre-2); font-size: 1.25rem; }
+.lien-suite { font-family: var(--police-ui); font-weight: 600; font-size: 1rem; }
+.note { margin-top: 1.75rem; color: var(--encre-2); }
+.deux-colonnes { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: clamp(1.75rem, 1rem + 3vw, 4rem); align-items: start; }
+@media (max-width: 860px) { .deux-colonnes { grid-template-columns: minmax(0, 1fr); } }
+.accroche { font-style: italic; font-size: 1.5rem; line-height: 1.3; color: var(--encre); max-width: 28ch; }
+
+/* Encadré de contact (fond teinté, sans ombre) */
+.encart { background: var(--santoire-pale); border-radius: var(--rayon); padding: clamp(1.25rem, 1rem + 1vw, 2rem); }
+.encart h3 { font-size: 1.3rem; }
+.encart p:last-child { margin-bottom: 0; }
+.coordonnees { font-family: var(--police-ui); font-size: 1rem; line-height: 1.5; }
+.coordonnees p { margin: 0 0 .6rem; }
+.coordonnees a { font-weight: 600; }
+
+/* ---------- Accueil : vitrine du patrimoine ---------- */
+.vitrine { display: grid; grid-template-columns: minmax(0, 9fr) minmax(0, 16fr); gap: clamp(1.25rem, .8rem + 2vw, 2.5rem); margin: 2rem 0 2.5rem; }
+.vitrine figure { margin: 0 0 .9rem; }
+.vitrine img { display: block; width: 100%; height: auto; border-radius: var(--rayon); }
+.vitrine .portrait img { aspect-ratio: 3 / 4; object-fit: cover; }
+.vitrine .paysage img { aspect-ratio: 4 / 3; object-fit: cover; }
+.vitrine h3 { margin-bottom: .3em; }
+.vitrine h3 a { color: var(--encre); text-decoration-color: var(--filet); }
+.vitrine h3 a:hover { color: var(--santoire-fonce); text-decoration-color: currentColor; }
+.vitrine p { color: var(--encre-2); margin: 0; }
+@media (max-width: 640px) { .vitrine { grid-template-columns: minmax(0, 1fr); } .vitrine .portrait img { aspect-ratio: 4 / 3; object-position: 50% 30%; } }
+
+/* Liste courte : autres éléments du patrimoine */
+.inventaire-court { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 2.5rem; border-top: 1px solid var(--filet); }
+.inventaire-court li { padding-block: 1rem; border-bottom: 1px solid var(--filet); }
+.inventaire-court a { font-weight: 600; }
+.inventaire-court span { display: block; color: var(--encre-2); font-size: 1.0625rem; }
+@media (max-width: 640px) { .inventaire-court { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- Pages intérieures ---------- */
+.entete-page { background: var(--fond); padding-block: clamp(2rem, 1.2rem + 3vw, 3.75rem) clamp(1.75rem, 1rem + 2.5vw, 3rem); border-bottom: 1px solid var(--filet); }
+.entete-page h1 { max-width: 20ch; }
+.chapo { font-size: clamp(1.25rem, 1.12rem + .5vw, 1.5rem); line-height: 1.45; color: var(--encre-2); max-width: 36rem; margin: 0; }
+.corps-page { padding-bottom: clamp(2rem, 1rem + 3vw, 4rem); }
+.corps-page > .bloc:first-child { padding-top: clamp(2rem, 1.2rem + 3vw, 3.5rem); }
+.corps-page > .bloc + .bloc { border-top: 1px solid var(--filet); }
+.texte { max-width: var(--mesure); }
+.texte > :last-child { margin-bottom: 0; }
+
+/* Notice d'un élément du patrimoine : photo et texte côte à côte */
+.notice { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(1.5rem, 1rem + 3vw, 3.5rem); align-items: start; }
+.notice--inverse { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); }
+.notice--inverse figure { order: 2; }
+.notice figure { margin: 0; }
+.notice img { display: block; width: 100%; height: auto; border-radius: var(--rayon); }
+@media (max-width: 760px) { .notice, .notice--inverse { grid-template-columns: minmax(0, 1fr); } .notice--inverse figure { order: 0; } }
+.lieu { font-family: var(--police-ui); font-size: .95rem; color: var(--encre-2); margin: -.2rem 0 1rem; }
+
+/* Fiche d'identité de la commune */
+.fiche { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: .55rem 1.5rem; margin: 0; padding: 1.4rem 1.6rem; background: var(--fond); border-radius: var(--rayon); }
+.fiche dt { font-family: var(--police-ui); font-size: .95rem; font-weight: 600; color: var(--encre-2); padding-top: .2rem; }
+.fiche dd { margin: 0; }
+@media (max-width: 560px) { .fiche { grid-template-columns: minmax(0, 1fr); gap: 0; } .fiche dt { padding-top: .8rem; } }
+
+/* Inventaire du petit patrimoine */
+.inventaire { margin: 1.5rem 0; max-width: 46rem; border-top: 1px solid var(--filet); }
+.inventaire > div { display: grid; grid-template-columns: minmax(0, 15rem) minmax(0, 1fr); gap: .25rem 2rem; padding-block: 1.1rem; border-bottom: 1px solid var(--filet); }
+.inventaire dt { font-weight: 600; line-height: 1.35; }
+.inventaire dd { margin: 0; color: var(--encre); }
+@media (max-width: 640px) { .inventaire > div { grid-template-columns: minmax(0, 1fr); } }
+
+/* Mémoire : la liste du projet Raconte-moi Saint-Bonnet */
+.memoires { list-style: none; padding: 0; margin: 1.75rem 0 1.25rem; columns: 2 18rem; column-gap: 3rem; }
+.memoires li { break-inside: avoid; font-style: italic; font-size: clamp(1.45rem, 1.1rem + 1.2vw, 2rem); line-height: 1.2; padding: .5rem 0 .65rem; border-bottom: 1px solid var(--filet); }
+
+/* Chiffres d'une randonnée, dans une phrase */
+.encadre-rando { padding: 1.4rem 1.6rem; background: var(--fond); border-radius: var(--rayon); max-width: var(--mesure); }
+.encadre-rando p:last-child { margin-bottom: 0; }
+.attention { font-family: var(--police-ui); font-size: 1rem; }
+
+/* ---------- Archives : tableaux ---------- */
+.tableau-defilant { overflow-x: auto; margin: 1.5rem 0; }
+.tableau-defilant:focus-visible { outline-offset: 2px; }
+table { border-collapse: collapse; width: 100%; font-family: var(--police-ui); font-size: 1rem; line-height: 1.4; }
+caption { text-align: left; font-family: var(--police-texte); font-size: 1.25rem; font-weight: 600; padding-bottom: .75rem; color: var(--encre); }
+th, td { text-align: left; vertical-align: top; padding: .6rem .9rem .6rem 0; border-bottom: 1px solid var(--filet); }
+thead th { font-size: .9rem; color: var(--encre-2); font-weight: 600; border-bottom: 2px solid var(--encre-2); }
+tbody th[scope="rowgroup"] { padding-top: 1.4rem; font-family: var(--police-texte); font-size: 1.125rem; color: var(--encre); border-bottom: 1px solid var(--encre-2); }
+tbody th[scope="rowgroup"] span { display: block; font-family: var(--police-ui); font-size: .9rem; font-weight: 400; color: var(--encre-2); }
+td.nombre, th.nombre { text-align: right; padding-right: 0; font-variant-numeric: tabular-nums lining-nums; }
+.registres td:first-child { white-space: nowrap; }
+.patronymes { max-width: 26rem; }
+.patronymes td:first-child { font-family: var(--police-texte); font-size: 1.125rem; }
+
+/* Conseils (liste non ordonnée) */
+.conseils { padding-left: 1.2rem; max-width: var(--mesure); }
+.conseils li { margin-bottom: .75rem; padding-left: .25rem; }
+.conseils li::marker { color: var(--encre-2); }
+
+/* Sources en bas de page */
+.sources { font-family: var(--police-ui); font-size: .95rem; color: var(--encre-2); }
+.sources > * { max-width: 46rem; }
+.sources h2 { font-size: 1.25rem; }
+.sources ul { padding-left: 1.2rem; }
+.sources li { margin-bottom: .4rem; }
+
+/* Mentions légales */
+.texte-legal h2 { font-size: 1.5rem; }
+.texte-legal p, .texte-legal ul { max-width: var(--mesure); }
+
+/* ---------- Pied de page ---------- */
+.pied { background: var(--basalte); color: var(--sur-basalte); font-family: var(--police-ui); font-size: 1rem; line-height: 1.55; --focus: var(--focus-sombre); }
+.pied a { color: var(--sur-basalte); }
+.pied-grille { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1fr); gap: 2rem 3rem; padding-block: 3rem 2.25rem; }
+.pied-titre { font-family: var(--police-texte); font-size: 1.2rem; font-weight: 600; color: var(--sur-basalte); margin: 0 0 .75rem; letter-spacing: 0; }
+.pied p { margin: 0 0 .75rem; color: var(--sur-basalte-2); }
+.pied p a { color: var(--sur-basalte); }
+.pied ul { list-style: none; padding: 0; margin: 0 0 .75rem; }
+.pied li { margin-bottom: .4rem; }
+.pied-bas { border-top: 1px solid rgba(255, 255, 255, .14); }
+.pied-bas .conteneur { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .5rem 2rem; padding-block: 1rem 1.25rem; font-size: .9rem; }
+.pied-bas p { margin: 0; }
+@media (max-width: 860px) { .pied-grille { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); } .pied-grille > :first-child { grid-column: 1 / -1; } }
+@media (max-width: 520px) { .pied-grille { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- Page introuvable ---------- */
+.introuvable { padding-block: clamp(3rem, 2rem + 4vw, 6rem); }
+
+/* ---------- Impression ---------- */
+@media print {
+  .en-tete-site, .bandeau-proposition, .pied, .boutons, .lien-evitement { display: none !important; }
+  body { font-size: 11pt; color: #000; background: #fff; }
+  a { color: #000; }
+  .bloc { padding-block: 1rem; }
+}
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; transition: none !important; animation: none !important; } }

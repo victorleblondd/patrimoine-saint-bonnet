@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<div class="entete-page">
+  <div class="conteneur">
+    <h1>{{ page.title }}</h1>
+    {%- if page.chapo %}
+    <p class="chapo">{{ page.chapo }}</p>
+    {%- endif %}
+  </div>
+</div>
+<div class="conteneur corps-page">
+{{ content }}
+</div>

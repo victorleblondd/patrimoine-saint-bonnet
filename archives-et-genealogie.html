@@ -1,0 +1,95 @@
+---
+title: "Archives et généalogie"
+permalink: /archives-et-genealogie/
+chapo: "Les registres paroissiaux et d’état civil de Saint-Bonnet-de-Condat, depuis 1601, ont été numérisés par les Archives départementales du Cantal. Ils se consultent gratuitement en ligne."
+description: "Retrouver ses ancêtres à Saint-Bonnet-de-Condat : les registres paroissiaux et d’état civil depuis 1601, les tables décennales, la liste des registres et les noms de famille du premier registre."
+---
+{%- assign p = site.data.patronymes -%}
+<section class="bloc" id="commencer" aria-labelledby="titre-commencer">
+  <div class="texte">
+    <h2 id="titre-commencer">Par où commencer&nbsp;?</h2>
+    <p>Les tables décennales recensent, décennie par décennie, les naissances, les mariages et les décès de la commune, de 1792 à 1932 puis de 1943 à 1962. C’est le point d’entrée le plus rapide pour retrouver un ancêtre&nbsp;: elles donnent le nom et la date de l’acte, qu’il suffit ensuite de lire dans le registre.</p>
+    <p>Les registres en ligne s’arrêtent en 1932 pour les naissances et les mariages, et en 1951 pour les décès. Pour un acte plus récent, adressez-vous à la mairie.</p>
+    <p class="boutons"><a class="bouton" href="https://www.archives.cantal.fr">Consulter les registres sur le site des Archives du Cantal</a></p>
+  </div>
+</section>
+
+<section class="bloc" id="conseils" aria-labelledby="titre-conseils">
+  <h2 id="titre-conseils">Bon à savoir</h2>
+  <ul class="conseils">
+    <li>De 1682 à 1825, la plupart des années existent en double&nbsp;: dans la collection de la paroisse, puis de la mairie, et dans celle du greffe. Une page illisible dans l’une se lit souvent dans l’autre.</li>
+    <li>À partir de 1826, seule la collection départementale est numérisée.</li>
+    <li>Sous la Révolution, les actes sont datés selon le calendrier républicain («&nbsp;an&nbsp;VII&nbsp;», «&nbsp;an&nbsp;VIII&nbsp;»…)&nbsp;: pensez à convertir les dates.</li>
+    <li>Un même nom s’écrit souvent de plusieurs façons d’un acte à l’autre&nbsp;: cherchez aussi ses variantes.</li>
+  </ul>
+</section>
+
+<section class="bloc" id="registres" aria-labelledby="titre-registres">
+  <h2 id="titre-registres">Les registres de la commune</h2>
+  <p class="mesure">Vingt-trois registres couvrent la commune, de 1601 à 1962. La cote permet de retrouver un registre dans le catalogue des Archives et de citer un acte.</p>
+  <div class="tableau-defilant">
+    <table class="registres">
+      <caption id="legende-registres">Registres de Saint-Bonnet-de-Condat numérisés par les Archives départementales du Cantal</caption>
+      <thead>
+        <tr>
+          <th scope="col">Cote</th>
+          <th scope="col">Actes</th>
+          <th scope="col">Période</th>
+          <th scope="col" class="nombre">Pages numérisées</th>
+        </tr>
+      </thead>
+      {%- for g in site.data.registres %}
+      <tbody>
+        <tr>
+          <th scope="rowgroup" colspan="4">{{ g.groupe }}<span>{{ g.description }}</span></th>
+        </tr>
+        {%- for r in g.registres %}
+        <tr>
+          <td>{{ r.cote }}</td>
+          <td>{{ r.nature }}</td>
+          <td>{{ r.periode }}</td>
+          <td class="nombre">{{ r.vues }}</td>
+        </tr>
+        {%- endfor %}
+      </tbody>
+      {%- endfor %}
+    </table>
+  </div>
+</section>
+
+<section class="bloc" id="noms" aria-labelledby="titre-noms">
+  <div class="deux-colonnes">
+    <div class="texte">
+      <h2 id="titre-noms">Les noms de famille du premier registre</h2>
+      <p>Le premier registre de la commune couvre les baptêmes, les mariages et les sépultures de 1601 à 1765. Son indexation collaborative, aux Archives départementales, compte {{ p.total_releves | number_with_delimiter }}&nbsp;relevés et {{ p.total_noms }}&nbsp;noms de famille.</p>
+      <p>Viennent ensuite {{ p.suivants }}, avec 16 ou 17&nbsp;relevés chacun. Rodde et Rode, ou Laurens et Laurent, désignent probablement les mêmes familles&nbsp;: l’orthographe des noms variait d’un acte à l’autre.</p>
+    </div>
+    <div class="tableau-defilant">
+      <table class="patronymes">
+        <caption id="legende-noms">Les dix noms les plus fréquents, 1601–1765</caption>
+        <thead>
+          <tr>
+            <th scope="col">Nom</th>
+            <th scope="col" class="nombre">Relevés</th>
+          </tr>
+        </thead>
+        <tbody>
+          {%- for n in p.noms %}
+          <tr>
+            <td>{{ n.nom }}</td>
+            <td class="nombre">{{ n.releves }}</td>
+          </tr>
+          {%- endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="bloc sources" aria-labelledby="titre-sources">
+  <h2 id="titre-sources">Sources</h2>
+  <ul>
+    <li>Le catalogue des Archives départementales du Cantal (liste des registres et nombre de pages, relevés en septembre 2026) et leur indexation collaborative du registre 5&nbsp;Mi&nbsp;313/1.</li>
+    <li>Le site de la commune, <a href="https://saint-bonnet-de-condat.fr/decouvrir/#archives">page Découvrir</a>, pour les registres en ligne et les actes récents.</li>
+  </ul>
+</section>

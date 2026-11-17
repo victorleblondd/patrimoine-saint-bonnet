@@ -1,0 +1,16 @@
+---
+title: "Page introuvable"
+permalink: /404.html
+layout: default
+description: "Cette adresse ne correspond à aucune page du site de l’association du Patrimoine de Saint-Bonnet-de-Condat."
+---
+<div class="conteneur introuvable">
+  <h1>Page introuvable</h1>
+  <p class="chapo">Cette adresse ne correspond à aucune page du site. Elle a peut-être changé, ou contient une faute de frappe.</p>
+  <ul class="conseils">
+    <li><a href="{{ '/' | relative_url }}">Accueil</a></li>
+    {%- for lien in site.data.navigation %}
+    <li><a href="{{ lien.url | relative_url }}">{{ lien.titre }}</a></li>
+    {%- endfor %}
+  </ul>
+</div>

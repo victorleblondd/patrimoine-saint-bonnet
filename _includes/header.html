@@ -1,0 +1,26 @@
+<a class="lien-evitement" href="#contenu">Aller au contenu</a>
+<header class="en-tete-site">
+  {%- if site.proposition %}
+  <div class="bandeau-proposition" role="note">
+    <p class="conteneur"><strong>Proposition de site</strong> pour l’association du Patrimoine de Saint-Bonnet-de-Condat, en vue de sa relance.</p>
+  </div>
+  {%- endif %}
+  <div class="conteneur en-tete-interieur">
+    <a class="marque" href="{{ '/' | relative_url }}"{% if page.url == "/" %} aria-current="page"{% endif %}>
+      <span class="marque-nom">{{ site.nom_court }}</span>
+      <span class="marque-lieu">{{ site.lieu }}</span>
+    </a>
+    <button class="bouton-menu" type="button" aria-expanded="false" aria-controls="menu-principal">
+      <svg class="icone icone-ouvrir" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <svg class="icone icone-fermer" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <span>Menu</span>
+    </button>
+    <nav class="navigation" id="menu-principal" aria-label="Menu principal">
+      <ul>
+        {%- for lien in site.data.navigation %}
+        <li><a href="{{ lien.url | relative_url }}"{% if page.url == lien.url %} aria-current="page"{% endif %}>{{ lien.titre }}</a></li>
+        {%- endfor %}
+      </ul>
+    </nav>
+  </div>
+</header>

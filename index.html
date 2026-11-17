@@ -1,0 +1,93 @@
+---
+title: "Accueil"
+permalink: /
+layout: default
+classe_corps: accueil
+---
+{%- assign m = site.data.contacts.mairie -%}
+{%- assign r = site.data.contacts.referent -%}
+<section class="heros" aria-labelledby="titre-accueil">
+  <div class="conteneur heros-grille">
+    <div class="heros-texte">
+      <h1 class="heros-titre" id="titre-accueil">Association du Patrimoine de Saint-Bonnet-de-Condat</h1>
+      <p class="litanie">Les histoires racontées dans le&nbsp;cantou, les&nbsp;fenaisons, le&nbsp;lavoir et la&nbsp;bascule, les&nbsp;fêtes du&nbsp;village, les&nbsp;années&nbsp;d’école, la&nbsp;recette du&nbsp;chou&nbsp;farci…</p>
+      <p class="heros-intro">Ces souvenirs font partie du patrimoine commun du village, comme son église, son four communal et ses moulins. Le projet «&nbsp;Raconte-moi Saint-Bonnet&nbsp;» veut les rassembler, avec les photographies du passé, pour les transmettre.</p>
+      <div class="etat">
+        <p><strong>L’association est aujourd’hui en sommeil.</strong> Elle attend des bénévoles pour en reprendre les rênes.</p>
+        <p class="boutons">
+          <a class="bouton" href="{{ '/association/' | relative_url }}#rejoindre">Devenir bénévole</a>
+          <a class="bouton bouton--secondaire" href="{{ '/raconte-moi/' | relative_url }}#participer">Partager un souvenir ou une photo</a>
+        </p>
+      </div>
+    </div>
+    <figure class="heros-photo">
+      <img src="{{ '/assets/images/village-neige.jpg' | relative_url }}" alt="Le bourg de Saint-Bonnet-de-Condat sous la neige, vu des hauteurs : toits blancs, clocher de l’église, prés et bois." width="1200" height="1197">
+      <figcaption>Le bourg sous la neige.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="bloc bloc--teinte" aria-labelledby="titre-raconte">
+  <div class="conteneur deux-colonnes">
+    <div>
+      <h2 id="titre-raconte">Raconte-moi Saint-Bonnet</h2>
+      <p class="accroche">Un voyage dans le temps et dans la mémoire d’un village.</p>
+      <p class="mesure">Un projet de l’association du Patrimoine, en partenariat avec la commune, pour regrouper les témoignages et les photographies du passé&nbsp;: les souvenirs d’un passé agricole, des fêtes du village, des années d’école.</p>
+      <p><a class="lien-suite" href="{{ '/raconte-moi/' | relative_url }}">Découvrir le projet</a></p>
+    </div>
+    <div class="encart">
+      <h3>Vous avez des photos anciennes, des documents ou des souvenirs&nbsp;?</h3>
+      <p>Contactez la mairie, ou {{ r.nom }}, {{ r.role }}.</p>
+      <div class="coordonnees">
+        <p>Mairie&nbsp;: <a href="tel:{{ m.telephone_lien }}" class="sans-retour">{{ m.telephone }}</a></p>
+        <p>{{ r.nom }}&nbsp;: <a href="mailto:{{ r.email }}">{{ r.email | replace: "@", "@<wbr>" }}</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bloc" aria-labelledby="titre-patrimoine">
+  <div class="conteneur">
+    <h2 id="titre-patrimoine">Le patrimoine du village</h2>
+    <p class="bloc-intro">Une église qui fut un prieuré, une mairie qui abritait l’école, un four communal, des moulins et, au-dessus du bourg, les orgues basaltiques.</p>
+    <div class="vitrine">
+      <div>
+        <figure class="portrait">
+          <img src="{{ '/assets/images/eglise.jpg' | relative_url }}" alt="L’église Saint-Bonnet : façade en pierre, clocher couvert d’ardoises." width="960" height="1282" loading="lazy">
+        </figure>
+        <h3><a href="{{ '/patrimoine/' | relative_url }}#eglise">L’église Saint-Bonnet</a></h3>
+        <p>Ancien prieuré, donné en 1131 par Aymeri, évêque de Clermont.</p>
+      </div>
+      <div>
+        <figure class="paysage">
+          <img src="{{ '/assets/images/mairie-ecole.jpg' | relative_url }}" alt="La mairie-école, grand bâtiment de pierre au toit de lauzes, et le monument aux morts devant elle." width="1400" height="1051" loading="lazy">
+        </figure>
+        <h3><a href="{{ '/patrimoine/' | relative_url }}#mairie-ecole">La mairie-école et le monument aux morts</a></h3>
+        <p>Le bâtiment de la mairie abritait aussi l’ancienne école.</p>
+      </div>
+    </div>
+    <ul class="inventaire-court">
+      <li><a href="{{ '/patrimoine/' | relative_url }}#four">Le four de Réghéat</a><span>Le four communal du village de Réghéat.</span></li>
+      <li><a href="{{ '/patrimoine/' | relative_url }}#moulins">Les moulins</a><span>Le moulin du Lessart et le moulin de Réginbal.</span></li>
+      <li><a href="{{ '/patrimoine/' | relative_url }}#croix">La croix ancienne</a><span>Dans le bourg.</span></li>
+      <li><a href="{{ '/patrimoine/' | relative_url }}#orgues">Les orgues basaltiques</a><span>Des colonnes de basalte au-dessus de la vallée de la Santoire.</span></li>
+    </ul>
+    <p><a class="lien-suite" href="{{ '/patrimoine/' | relative_url }}">Tout le patrimoine</a></p>
+  </div>
+</section>
+
+<section class="bloc bloc--teinte" aria-labelledby="titre-archives">
+  <div class="conteneur">
+    <h2 id="titre-archives">Archives et généalogie</h2>
+    <p class="bloc-intro">Les registres de la paroisse et de l’état civil de Saint-Bonnet-de-Condat remontent à 1601. Numérisés par les Archives départementales du Cantal, ils se consultent gratuitement en ligne.</p>
+    <p><a class="lien-suite" href="{{ '/archives-et-genealogie/' | relative_url }}">Retrouver ses ancêtres</a></p>
+  </div>
+</section>
+
+<section class="bloc bloc--appel" aria-labelledby="titre-rejoindre">
+  <div class="conteneur">
+    <h2 id="titre-rejoindre">Reprendre les rênes de l’association</h2>
+    <p class="mesure">Pour reprendre vie, l’association a besoin de bénévoles. Vous souhaitez vous investir pour le patrimoine et la mémoire de Saint-Bonnet-de-Condat&nbsp;? Faites-vous connaître auprès de la mairie.</p>
+    <p class="boutons"><a class="bouton" href="{{ '/association/' | relative_url }}#rejoindre">Devenir bénévole</a></p>
+  </div>
+</section>

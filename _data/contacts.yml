@@ -1,0 +1,34 @@
+# Contacts affichés sur le site (pages L’association, Raconte-moi Saint-Bonnet, accueil, pied de page).
+# Modifier ici une seule fois : tout le site se met à jour.
+# Source : site de la commune (https://saint-bonnet-de-condat.fr), pages Mairie et Découvrir (novembre 2026).
+
+mairie:
+  nom: "Mairie de Saint-Bonnet-de-Condat"
+  adresse_ligne1: "2 rue de la Santoire"
+  adresse_ligne2: "15190 Saint-Bonnet-de-Condat"
+  # Même lien Google Maps que sur le site de la commune
+  carte_url: "https://maps.app.goo.gl/pSZQ51F1qWHEwEpn7?g_st=ic"
+  telephone: "04 71 78 41 64"
+  telephone_lien: "+33471784164"
+  email: "mairie.stbonnetdecondat@orange.fr"
+  # Les horaires changent : on renvoie vers la page de la mairie sur le site de la commune
+  horaires_url: "https://saint-bonnet-de-condat.fr/mairie/#contact"
+
+# Contact du projet « Raconte-moi Saint-Bonnet » donné par la commune
+referent:
+  nom: "Claude Legrand"
+  role: "conseiller municipal"
+  email: "legrand.claude63@gmail.com"
+
+# À compléter le jour où l’association adopte le site (voir README.md) :
+# ces informations s’affichent alors dans les mentions légales.
+association:
+  siege: ""          # adresse du siège social
+  rna: ""            # numéro au Répertoire national des associations (W15…), s’il existe
+  responsable: ""    # directeur ou directrice de la publication (en général, la présidence)
+  email: ""          # adresse de l’association, si elle en a une
+
+commune:
+  nom: "Commune de Saint-Bonnet-de-Condat"
+  site: "https://saint-bonnet-de-condat.fr"
+  site_affiche: "saint-bonnet-de-condat.fr"

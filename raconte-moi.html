@@ -1,0 +1,48 @@
+---
+title: "Raconte-moi Saint-Bonnet"
+permalink: /raconte-moi/
+chapo: "Un voyage dans le temps et dans la mémoire d’un village."
+description: "Raconte-moi Saint-Bonnet, un projet de l’association du Patrimoine en partenariat avec la commune : rassembler les souvenirs et les photographies du passé de Saint-Bonnet-de-Condat. Comment participer."
+---
+{%- assign m = site.data.contacts.mairie -%}
+{%- assign r = site.data.contacts.referent -%}
+<section class="bloc" aria-labelledby="titre-projet">
+  <div class="texte">
+    <h2 id="titre-projet">Le projet</h2>
+    <p>Un projet de l’association du Patrimoine, en partenariat avec la commune.</p>
+    <p>Parce que nous avons un devoir de mémoire et de transmission, «&nbsp;Raconte-moi Saint-Bonnet&nbsp;» est un projet joyeux, ludique mais aussi utile. Les souvenirs d’un passé agricole, des fêtes du village, des années d’école, les histoires racontées dans le cantou&nbsp;: ce sont ces témoignages et les photographies du passé que nous voulons regrouper ensemble.</p>
+  </div>
+</section>
+
+<section class="bloc" aria-labelledby="titre-commun">
+  <h2 id="titre-commun">Un patrimoine commun</h2>
+  <ul class="memoires">
+    <li>La recette du chou farci</li>
+    <li>Les fenaisons</li>
+    <li>Les auges où les vaches s’abreuvaient</li>
+    <li>Le lavoir</li>
+    <li>La bascule</li>
+    <li>Les fêtes du village</li>
+    <li>Les années d’école</li>
+    <li>Les histoires racontées dans le cantou, au coin du feu</li>
+  </ul>
+  <p class="mesure">Tous font partie de ce patrimoine commun. Une recette, une photographie de classe, le nom d’un lieu-dit, un souvenir de fenaisons&nbsp;: chaque témoignage compte.</p>
+</section>
+
+<section class="bloc" id="participer" aria-labelledby="titre-participer">
+  <div class="deux-colonnes">
+    <div class="texte">
+      <h2 id="titre-participer">Comment participer&nbsp;?</h2>
+      <p>Vous avez des photos anciennes, des documents ou des souvenirs à partager&nbsp;? Contactez la mairie, ou {{ r.nom }}, {{ r.role }}.</p>
+      <p>Le <a href="{{ '/patrimoine/' | relative_url }}">patrimoine du village</a> garde aussi ses questions&nbsp;: si vous connaissez l’histoire d’un moulin, du four de Réghéat ou de la croix du bourg, elle a sa place dans le projet.</p>
+    </div>
+    <div class="encart">
+      <h3>Partager un souvenir ou une photo</h3>
+      <div class="coordonnees">
+        <p>Mairie&nbsp;: <a href="tel:{{ m.telephone_lien }}" class="sans-retour">{{ m.telephone }}</a></p>
+        <p>{{ r.nom }}&nbsp;: <a href="mailto:{{ r.email }}">{{ r.email | replace: "@", "@<wbr>" }}</a></p>
+        <p><a href="{{ m.horaires_url }}">Horaires d’ouverture de la mairie</a> (site de la commune)</p>
+      </div>
+    </div>
+  </div>
+</section>

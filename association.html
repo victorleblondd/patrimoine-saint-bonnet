@@ -1,0 +1,49 @@
+---
+title: "L’association"
+permalink: /association/
+chapo: "Aujourd’hui en sommeil, l’association du Patrimoine attend des bénévoles pour en reprendre les rênes, avec le projet «&nbsp;Raconte-moi Saint-Bonnet&nbsp;»."
+description: "L’association du Patrimoine de Saint-Bonnet-de-Condat est en sommeil et cherche des bénévoles pour reprendre vie. Son projet avec la commune, Raconte-moi Saint-Bonnet, et ses contacts."
+---
+{%- assign m = site.data.contacts.mairie -%}
+{%- assign r = site.data.contacts.referent -%}
+{%- assign c = site.data.contacts.commune -%}
+<section class="bloc" id="projet" aria-labelledby="titre-projet">
+  <div class="texte">
+    <h2 id="titre-projet">Un projet avec la commune</h2>
+    <p>«&nbsp;Raconte-moi Saint-Bonnet&nbsp;» est un projet de l’association du Patrimoine, en partenariat avec la commune de Saint-Bonnet-de-Condat. Il veut regrouper les témoignages et les photographies du passé du village.</p>
+    <p>Son lancement figure parmi les premières actions de l’équipe municipale installée le 22&nbsp;mars 2026, aux côtés du soutien à la vie associative.</p>
+    <p><a class="lien-suite" href="{{ '/raconte-moi/' | relative_url }}">Découvrir le projet</a></p>
+  </div>
+</section>
+
+<section class="bloc" id="rejoindre" aria-labelledby="titre-rejoindre">
+  <div class="texte">
+    <h2 id="titre-rejoindre">Reprendre les rênes</h2>
+    <p>Pour reprendre vie, l’association a besoin de bénévoles. Ce site rassemble déjà de quoi commencer&nbsp;: le projet «&nbsp;Raconte-moi Saint-Bonnet&nbsp;», un premier inventaire du <a href="{{ '/patrimoine/' | relative_url }}">patrimoine du village</a> et un guide des <a href="{{ '/archives-et-genealogie/' | relative_url }}">archives</a> pour retrouver ses ancêtres.</p>
+    <p>Vous souhaitez vous investir&nbsp;? Faites-vous connaître auprès de la mairie ou de {{ r.nom }}, {{ r.role }}.</p>
+    <p>Vous avez été membre de l’association, ou vous gardez des documents de ses activités&nbsp;? Ils aideront à la relancer&nbsp;: faites-vous connaître, vous aussi.</p>
+  </div>
+</section>
+
+<section class="bloc" id="contact" aria-labelledby="titre-contact">
+  <h2 id="titre-contact">Contact</h2>
+  <div class="deux-colonnes">
+    <div class="encart">
+      <h3>{{ m.nom }}</h3>
+      <div class="coordonnees">
+        <p><a href="{{ m.carte_url }}">{{ m.adresse_ligne1 }}<br>{{ m.adresse_ligne2 }}<span class="visuellement-cache"> (ouvrir dans Google Maps)</span></a></p>
+        <p>Téléphone&nbsp;: <a href="tel:{{ m.telephone_lien }}" class="sans-retour">{{ m.telephone }}</a></p>
+        <p>Courriel&nbsp;: <a href="mailto:{{ m.email }}">{{ m.email | replace: "@", "@<wbr>" }}</a></p>
+        <p><a href="{{ m.horaires_url }}">Horaires d’ouverture de la mairie</a> (site de la commune)</p>
+      </div>
+    </div>
+    <div class="encart">
+      <h3>{{ r.nom }}, {{ r.role }}</h3>
+      <div class="coordonnees">
+        <p>Pour le projet «&nbsp;Raconte-moi Saint-Bonnet&nbsp;».</p>
+        <p>Courriel&nbsp;: <a href="mailto:{{ r.email }}">{{ r.email | replace: "@", "@<wbr>" }}</a></p>
+      </div>
+    </div>
+  </div>
+  <p class="mesure note">La vie de la commune, ses actualités et ses démarches sont sur le site de la commune&nbsp;: <a href="{{ c.site }}">{{ c.site_affiche }}</a>.</p>
+</section>

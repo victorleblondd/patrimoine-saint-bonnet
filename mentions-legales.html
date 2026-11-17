@@ -1,0 +1,57 @@
+---
+title: "Mentions légales"
+permalink: /mentions-legales/
+description: "Mentions légales, sources, crédits et données personnelles du site de l’association du Patrimoine de Saint-Bonnet-de-Condat."
+---
+{%- assign m = site.data.contacts.mairie -%}
+{%- assign a = site.data.contacts.association -%}
+<div class="texte-legal">
+  <section class="bloc" aria-labelledby="titre-editeur">
+    <h2 id="titre-editeur">Éditeur du site</h2>
+    {%- if site.proposition %}
+    <p>Ce site est une <strong>proposition</strong>, préparée bénévolement pour l’association du Patrimoine de Saint-Bonnet-de-Condat en vue de sa relance. L’association étant en sommeil, il n’a pas encore été validé par ses membres.</p>
+    <p>Auteur de la proposition et directeur de la publication&nbsp;: Victor Leblond.</p>
+    {%- else %}
+    <p>{{ site.title }}{% if a.siege != "" %}<br>Siège&nbsp;: {{ a.siege }}{% endif %}{% if a.rna != "" %}<br>Numéro RNA&nbsp;: {{ a.rna }}{% endif %}{% if a.email != "" %}<br>Courriel&nbsp;: <a href="mailto:{{ a.email }}">{{ a.email }}</a>{% endif %}</p>
+    {%- if a.responsable != "" %}
+    <p>Directeur ou directrice de la publication&nbsp;: {{ a.responsable }}.</p>
+    {%- endif %}
+    {%- endif %}
+    <p>Pour toute question sur l’association ou sur le projet «&nbsp;Raconte-moi Saint-Bonnet&nbsp;», vous pouvez vous adresser à la mairie de Saint-Bonnet-de-Condat&nbsp;: {{ m.adresse_ligne1 }}, {{ m.adresse_ligne2 }}, téléphone <a href="tel:{{ m.telephone_lien }}" class="sans-retour">{{ m.telephone }}</a>, courriel <a href="mailto:{{ m.email }}">{{ m.email | replace: "@", "@<wbr>" }}</a>.</p>
+  </section>
+
+  <section class="bloc" aria-labelledby="titre-hebergement">
+    <h2 id="titre-hebergement">Hébergement</h2>
+    <p>GitHub, Inc. (service GitHub Pages), 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis.</p>
+  </section>
+
+  <section class="bloc" aria-labelledby="titre-sources">
+    <h2 id="titre-sources">Sources des contenus</h2>
+    <ul>
+      <li>Le site de la commune de Saint-Bonnet-de-Condat (pages <a href="https://saint-bonnet-de-condat.fr/vie-locale/">Vie locale</a> et <a href="https://saint-bonnet-de-condat.fr/decouvrir/">Découvrir</a>) et <cite>La Gazette des Saint-Bonnetoux</cite> n°&nbsp;1 (été 2026)&nbsp;: l’association, le projet «&nbsp;Raconte-moi Saint-Bonnet&nbsp;», le patrimoine et les registres en ligne.</li>
+      <li>L’article <a href="https://fr.wikipedia.org/wiki/Saint-Bonnet-de-Condat">Saint-Bonnet-de-Condat</a> de Wikipédia&nbsp;: l’église, les moulins, la croix, les hameaux et les anciens noms de la commune.</li>
+      <li>L’office de tourisme Destination Haut Cantal et le Parc naturel régional des Volcans d’Auvergne&nbsp;: les orgues basaltiques et la randonnée.</li>
+      <li>Les Archives départementales du Cantal&nbsp;: la liste des registres et l’indexation collaborative du premier registre.</li>
+      <li>L’Insee&nbsp;: la population légale 2023.</li>
+    </ul>
+  </section>
+
+  <section class="bloc" aria-labelledby="titre-credits">
+    <h2 id="titre-credits">Crédits</h2>
+    <p>Photographie de l’église Saint-Bonnet&nbsp;: Père Igor, <a href="https://commons.wikimedia.org/wiki/File:Saint-Bonnet-de-Condat_%C3%A9glise.jpg">Wikimedia Commons</a>, licence <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.fr">CC BY-SA 4.0</a>, image adaptée.</p>
+    <p>Photographie de la mairie-école&nbsp;: Père Igor, <a href="https://commons.wikimedia.org/wiki/File:Saint-Bonnet-de-Condat_mairie-%C3%A9cole.jpg">Wikimedia Commons</a>, licence <a href="https://creativecommons.org/licenses/by-sa/4.0/deed.fr">CC BY-SA 4.0</a>, image réduite.</p>
+    <p>Police de caractères&nbsp;: Spectral, de Production Type, sous licence SIL Open Font License&nbsp;1.1.</p>
+  </section>
+
+  <section class="bloc" id="donnees" aria-labelledby="titre-donnees">
+    <h2 id="titre-donnees">Données personnelles</h2>
+    <p>Ce site ne comporte ni formulaire, ni cookie, ni outil de mesure d’audience. Sa police de caractères est hébergée avec le site&nbsp;: aucun service tiers n’est appelé pour l’afficher. L’hébergeur peut enregistrer des données techniques de connexion, comme l’adresse IP, pour assurer la sécurité du service.</p>
+    <p>Les liens vers d’autres sites (Archives du Cantal, Parc des Volcans, Google Maps…) mènent à des services qui ont leurs propres règles.</p>
+  </section>
+
+  <section class="bloc" id="accessibilite" aria-labelledby="titre-accessibilite">
+    <h2 id="titre-accessibilite">Accessibilité</h2>
+    <p>Ce site a été conçu pour être utilisable par tous&nbsp;: navigation au clavier, contrastes renforcés, textes agrandissables, lecture sur téléphone et mode sombre. Il n’a pas fait l’objet d’un audit de conformité au RGAA.</p>
+    <p>Un contenu vous est difficile d’accès&nbsp;? Les contacts de la page <a href="{{ '/association/' | relative_url }}#contact">L’association</a> permettent d’obtenir l’information sous une autre forme.</p>
+  </section>
+</div>
