@@ -3,7 +3,7 @@
 # collaborative des Archives départementales du Cantal : 1 242 relevés, 353 noms de famille.
 # releves = nombre de relevés portant ce nom (graphie de l’indexation).
 
-total_releves: 1242
+total_releves: "1 242"   # écrit avec l’espace fine des milliers (texte affiché tel quel)
 total_noms: 353
 noms:
   - nom: "Rodde"
